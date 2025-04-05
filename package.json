@@ -1,6 +1,6 @@
 {
   "name": "wv-components",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "Lars Devans <l.beijaard1@student.avans.nl> (https://larsdevans.github.io/WV-Components/)",
   "type": "module",
   "types": "dist/index.d.ts",
