@@ -5,6 +5,7 @@ export interface ButtonProps {
   disabled?: boolean;
   icon?: ReactNode;
   label?: string;
+  outlined?: boolean;
   shadow?: boolean;
   type?: 'button' | 'submit' | 'reset';
   onClick?: () => void;

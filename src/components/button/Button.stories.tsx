@@ -8,6 +8,7 @@ const meta = {
   parameters: {
     layout: 'centered',
   },
+  tags: ['autodocs'],
 } satisfies Meta<typeof Button>;
 
 export default meta;
@@ -19,6 +20,7 @@ export const Default: Story = {
     disabled: false,
     icon: null,
     label: 'Button',
+    outlined: false,
     shadow: false,
     type: 'button',
     onClick: () => {}
@@ -37,6 +39,7 @@ export const Disabled: Story = {
     disabled: true,
     icon: null,
     label: 'Button',
+    outlined: false,
     shadow: false,
     type: 'button',
     onClick: () => {}
@@ -55,6 +58,26 @@ export const Icon: Story = {
     disabled: false,
     icon: <Plus />,
     label: 'Button',
+    outlined: false,
+    shadow: false,
+    type: 'button',
+    onClick: () => {}
+  },
+  render: (args) => (
+    <div style={{ display: 'flex', gap: '1rem' }}>
+      <Button {...args} color='primary' label='Primary' />
+      <Button {...args} color='secondary' label='Secondary' />
+    </div>
+  ),
+};
+
+export const Outlined: Story = {
+  args: {
+    color: 'primary',
+    disabled: false,
+    icon: null,
+    label: 'Button',
+    outlined: true,
     shadow: false,
     type: 'button',
     onClick: () => {}
@@ -73,6 +96,7 @@ export const Shadow: Story = {
     disabled: false,
     icon: null,
     label: 'Button',
+    outlined: false,
     shadow: true,
     type: 'button',
     onClick: () => {}

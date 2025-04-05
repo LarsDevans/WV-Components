@@ -6,20 +6,28 @@ export const Button = ({
   disabled = false,
   icon = undefined,
   label = '',
+  outlined = false,
   shadow = false,
   type = 'button',
   onClick = () => {}
 }: ButtonProps) => {
-  const bgColorClass = color === 'primary' ? 'bg-primary' : 'bg-secondary';
+  const isPrimary = color === 'primary';
+
+  const baseClasses = `
+    ${shadow ? 'shadow-md' : ''}
+    flex gap-2.5 justify-center px-4 py-1.5 rounded-lg text-center
+    cursor-pointer disabled:opacity-30 disabled:cursor-not-allowed
+  `;
+
+  const colorClasses = outlined
+    ? `${isPrimary ? 'border-primary text-primary' : 'border-secondary text-secondary'} border`
+    : `${isPrimary ? 'bg-primary' : 'bg-secondary'} text-white`;
+
+  const classList = `${baseClasses} ${colorClasses}`;
 
   return (
     <motion.button
-      className={`
-        ${bgColorClass} ${shadow ? 'shadow-md' : ''}
-        flex gap-2.5 py-1.5 px-4 rounded-lg
-        text-white font-light
-        cursor-pointer disabled:opacity-30 disabled:cursor-not-allowed
-      `}
+      className={classList}
       disabled={disabled}
       type={type}
       onClick={onClick}
