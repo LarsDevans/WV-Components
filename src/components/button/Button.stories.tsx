@@ -26,7 +26,7 @@ export const Default: Story = {
     onClick: () => {}
   },
   render: (args) => (
-    <div style={{ display: 'flex', gap: '1rem' }}>
+    <div className="flex gap-4">
       <Button {...args} color='primary' label='Primary' />
       <Button {...args} color='secondary' label='Secondary' />
     </div>
@@ -45,7 +45,7 @@ export const Disabled: Story = {
     onClick: () => {}
   },
   render: (args) => (
-    <div style={{ display: 'flex', gap: '1rem' }}>
+    <div className="flex gap-4">
       <Button {...args} color='primary' label='Primary' />
       <Button {...args} color='secondary' label='Secondary' />
     </div>
@@ -64,7 +64,7 @@ export const Icon: Story = {
     onClick: () => {}
   },
   render: (args) => (
-    <div style={{ display: 'flex', gap: '1rem' }}>
+    <div className="flex gap-4">
       <Button {...args} color='primary' label='Primary' />
       <Button {...args} color='secondary' label='Secondary' />
     </div>
@@ -83,7 +83,7 @@ export const Outlined: Story = {
     onClick: () => {}
   },
   render: (args) => (
-    <div style={{ display: 'flex', gap: '1rem' }}>
+    <div className="flex gap-4">
       <Button {...args} color='primary' label='Primary' />
       <Button {...args} color='secondary' label='Secondary' />
     </div>
@@ -102,7 +102,7 @@ export const Shadow: Story = {
     onClick: () => {}
   },
   render: (args) => (
-    <div style={{ display: 'flex', gap: '1rem' }}>
+    <div className="flex gap-4">
       <Button {...args} color='primary' label='Primary' />
       <Button {...args} color='secondary' label='Secondary' />
     </div>
