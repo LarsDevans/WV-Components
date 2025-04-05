@@ -3,7 +3,6 @@ name: Build and Publish Storybook to GitHub Pages
 on:
   push:
     branches: [ "development" ]
-  pull_request: # Temporary configuration for testing purposes
 
 permissions:
   contents: read
